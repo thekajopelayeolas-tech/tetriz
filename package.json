@@ -1,0 +1,11 @@
+{
+  "name": "tetriz",
+  "version": "1.0.0",
+  "description": "A browser Tetris game following the Tetris Guideline (SRS, 7-bag, hold, ghost piece, T-spins).",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "test": "node --test tests/*.test.js"
+  },
+  "license": "MIT"
+}

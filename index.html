@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetriz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="layout">
+    <aside class="panel">
+      <h2>Hold</h2>
+      <canvas id="hold" width="120" height="90"></canvas>
+    </aside>
+
+    <section class="board-wrap">
+      <canvas id="board" width="300" height="600"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <p>Game Over</p>
+        <button id="restart">Play again</button>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <h2>Next</h2>
+      <canvas id="next" width="120" height="330"></canvas>
+      <dl class="stats">
+        <dt>Score</dt><dd id="score">0</dd>
+        <dt>Lines</dt><dd id="lines">0</dd>
+        <dt>Level</dt><dd id="level">1</dd>
+      </dl>
+      <p class="hint">
+        ←/→ move · ↑/X rotate CW · Z rotate CCW · ↓ soft drop · Space hard drop · C hold · P pause
+      </p>
+    </aside>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
