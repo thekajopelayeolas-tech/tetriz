@@ -8,9 +8,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #111;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url('space_world_background.png') center / cover no-repeat fixed,
+    #111;
+  image-rendering: pixelated;
   color: #eee;
   font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Level 1 uses the base body background above. */
+body[data-level="2"] {
+  background: linear-gradient(to bottom, #3b1f4a, #7a2e4f);
+}
+
+body[data-level="3"] {
+  background: linear-gradient(to bottom, #0b2e1a, #1f5c34);
+}
+
+body[data-level="4"] {
+  background: linear-gradient(to bottom, #04213a, #0f5c7a);
+}
+
+body[data-level="5"] {
+  background: radial-gradient(ellipse at bottom, #7a1f00, #1a0500 70%);
+}
+
+body[data-level="6"] {
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 0, 200, 0.12) 0 1px, transparent 1px 40px),
+    repeating-linear-gradient(90deg, rgba(0, 255, 255, 0.12) 0 1px, transparent 1px 40px),
+    #0a0a14;
 }
 
 .layout {

@@ -6,6 +6,10 @@ import { renderBoard, renderHold, renderNext, CELL } from './render.js';
 const DAS = 0.167; // seconds before repeat starts
 const ARR = 0.033; // seconds between repeats
 
+// Each level uses a background from body[data-level="1"] to body[data-level="N"] in style.css.
+// Levels past N cycle back to the start.
+const BACKGROUND_COUNT = 6;
+
 const boardCanvas = document.getElementById('board');
 const holdCanvas = document.getElementById('hold');
 const nextCanvas = document.getElementById('next');
@@ -33,6 +37,7 @@ function updateHud() {
   scoreEl.textContent = game.score;
   linesEl.textContent = game.lines;
   levelEl.textContent = game.level;
+  document.body.dataset.level = String(((game.level - 1) % BACKGROUND_COUNT) + 1);
 }
 
 function draw() {
