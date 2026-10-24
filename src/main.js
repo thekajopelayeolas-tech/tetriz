@@ -8,7 +8,7 @@ const ARR = 0.033; // seconds between repeats
 
 // Each level uses a background from body[data-level="1"] to body[data-level="N"] in style.css.
 // Levels past N cycle back to the start.
-const BACKGROUND_COUNT = 6;
+const BACKGROUND_COUNT = 7;
 
 const boardCanvas = document.getElementById('board');
 const holdCanvas = document.getElementById('hold');
