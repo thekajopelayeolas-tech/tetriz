@@ -9,38 +9,47 @@ body {
   align-items: center;
   justify-content: center;
   --bg-image: url('space_world_background.png');
+  --overlay: 0.35;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    linear-gradient(rgba(0, 0, 0, var(--overlay)), rgba(0, 0, 0, var(--overlay))),
     var(--bg-image) center / cover no-repeat fixed,
     #111;
   image-rendering: pixelated;
   color: #eee;
   font-family: system-ui, -apple-system, sans-serif;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Level 1 uses the base --bg-image set on body above. */
+/* Level 1 uses the base --bg-image and --overlay set on body above.
+   Brighter images get a lighter overlay so their colors stay vivid. */
 body[data-level="2"] {
   --bg-image: url('candy_land_world_background.png');
+  --overlay: 0.5;
 }
 
 body[data-level="3"] {
   --bg-image: url('city_world_background.png');
+  --overlay: 0.45;
 }
 
 body[data-level="4"] {
   --bg-image: url('desert_world_background.png');
+  --overlay: 0.45;
 }
 
 body[data-level="5"] {
   --bg-image: url('forest_world_background.png');
+  --overlay: 0.45;
 }
 
 body[data-level="6"] {
   --bg-image: url('snow_world_background.png');
+  --overlay: 0.5;
 }
 
 body[data-level="7"] {
   --bg-image: url('underwater_world_background.png');
+  --overlay: 0.4;
 }
 
 .layout {
